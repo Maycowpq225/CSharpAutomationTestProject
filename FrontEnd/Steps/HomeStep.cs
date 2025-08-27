@@ -6,10 +6,11 @@ using NUnit.Framework;
 [Binding]
 public class HomeStep
 {
-    private IWebDriver driver;
+    private HomePO homePO = new();
 
     [Then(@"User validate he is on the homescreen")]
     public void ValidateHomeScreen()
     {
+        homePO.ValidateHomeScreen();
     }
 }

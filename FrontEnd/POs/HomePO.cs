@@ -1,16 +1,13 @@
 using OpenQA.Selenium;
 
-public class HomePO
+public class HomePO : BasePO
 {
-    private IWebDriver driver;
 
-    private By usernameField = By.XPath("//input[@name='username']");
-    private By passwordField = By.XPath("//input[@name='password']");
-    private By loginButton = By.XPath("//button[@type='submit']");
+    private By lblSwagLabsTitle = By.XPath("//div[text()='Swag Labs']");
 
-    public HomePO(IWebDriver driver)
+    public void ValidateHomeScreen()
     {
-        this.driver = driver;
+        WaitElementIsVisible(lblSwagLabsTitle);
     }
 
 }
